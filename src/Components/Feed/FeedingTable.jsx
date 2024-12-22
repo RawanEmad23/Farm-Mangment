@@ -79,7 +79,7 @@ function FeedingTable() {
             style={{ marginTop: "140px" }}
           >
             <h2 style={{ color: "#88522e" }}>Feed Records</h2>
-            <Link to="/addFeed">
+            <Link to="/feed">
               <button
                 type="button"
                 className="btn btn-lg active"
