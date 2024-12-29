@@ -6,13 +6,15 @@ import { Rings } from "react-loader-spinner";
 import { FaRegEdit } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Swal from "sweetalert2"; // استيراد SweetAlert
+import { useNavigate } from "react-router-dom";
 
 function FeedingTable() {
+     let navigate = useNavigate();
   const { getAllFeed, Deletfeed } = useContext(Feedcontext);
   const [feedData, setFeedData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Fetch data function
+
   const fetchFeedData = async () => {
     setIsLoading(true);
     try {
@@ -59,6 +61,11 @@ function FeedingTable() {
       }
     });
   };
+
+
+  function Editfeed(id){
+    navigate(`/editfeed/${id}`)
+  }
 
   return (
     <>
@@ -119,8 +126,9 @@ function FeedingTable() {
                   >
                     <RiDeleteBin6Line /> Remove
                   </td>
-                  <td style={{ cursor: "pointer", color: "#88522e" }}>
+                  <td style={{ cursor: "pointer", color: "#88522e" }} onClick={()=>Editfeed(item._id)}>
                     <FaRegEdit /> Edit
+                    
                   </td>
                 </tr>
               ))}

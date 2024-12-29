@@ -66,7 +66,10 @@ function EditVaccine() {
                             ? new Date(vaccinationLog.DateGiven).toISOString().split('T')[0] 
                             : '',
                     });
-                } else {
+                } 
+                
+                
+                else {
                     throw new Error("Unexpected API response structure");
                 }
             } catch (error) {

@@ -44,6 +44,8 @@ import EditExcluted from "./Components/Excluted/EditExcluted.jsx";
 import Feed from "./Components/Feed/feed.jsx";
 import FeedContextProvider from "./Context/FeedContext.js";
 import FeedingTable from "./Components/Feed/FeedingTable.jsx";
+import Editfeed from "./Components/Feed/Editfeed.jsx";
+import Feedbylocation from "./Components/Feed/Feedbylocation.jsx";
 
 
 let routers = createBrowserRouter([
@@ -67,6 +69,7 @@ let routers = createBrowserRouter([
       { path: "breeding", element: <ProtectedRoute><Breeding /></ProtectedRoute> },
       { path: "breadingTable", element: <ProtectedRoute><BreadingTable /></ProtectedRoute> },
       { path: "editbreading/:id", element: <ProtectedRoute><EditBreeding /></ProtectedRoute> },
+      { path: "editfeed/:id", element: <ProtectedRoute><Editfeed /></ProtectedRoute> },
       { path: "animals", element: <ProtectedRoute><Animals /></ProtectedRoute> },
       // { path: "uploadExcel", element: <ProtectedRoute><UploadExcel /></ProtectedRoute> },
       { path: "editAnimal/:id", element: <ProtectedRoute><EditAnimal /></ProtectedRoute> },
@@ -83,6 +86,7 @@ let routers = createBrowserRouter([
       { path: "feed", element: <Feed></Feed> },
       { path: "feedcon", element: <FeedingTable></FeedingTable>},
       { path: "editVaccine/:id", element: <ProtectedRoute><EditVaccine/></ProtectedRoute> },
+      { path: "feedlocation", element: <Feedbylocation></Feedbylocation>},
     ],
   },
 ]);

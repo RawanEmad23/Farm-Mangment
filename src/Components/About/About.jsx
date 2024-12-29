@@ -49,7 +49,7 @@ export default function About() {
             display: none;
           }
           .aboutdiv {
-            text-align: center; /* Center text for small screens */
+            text-align: center; 
           }
         }
       `}</style>

@@ -36,7 +36,6 @@ export default function EditBreeding() {
                     numberOfBirths: breedingData.birthEntries ? breedingData.birthEntries.length : 1,
                 });
 
-                // Set birth entries
                 setBirthEntries(breedingData.birthEntries.map(entry => ({
                     tagId: entry.tagId || '',
                     gender: entry.gender || '',

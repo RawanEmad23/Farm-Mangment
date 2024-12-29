@@ -81,6 +81,15 @@ export default function Navbar() {
          feedcon
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link"
+                to="feedlocation"
+                style={{ color: "#E9E6E2" }}
+              >
+         feedlocation
+              </Link>
+            </li>
           </>
         ) : (
           ""
