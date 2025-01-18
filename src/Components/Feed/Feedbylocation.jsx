@@ -8,7 +8,7 @@ export default function Feedbylocation() {
   const [isLoading, setIsLoading] = useState(false);
   const { Authorization } = useContext(UserContext);
 
-  // دالة لإرسال البيانات إلى السيرفر
+  
   async function post(values) {
     try {
       setIsLoading(true);
@@ -34,7 +34,7 @@ export default function Feedbylocation() {
     initialValues: {
       locationShed: "",
       feeds: [
-        { feedName: "", quantity: "" }  // حقل واحد لتعبئة الـ feed
+        { feedName: "", quantity: "" }  
       ],
       date: ""
     },

@@ -1,10 +1,8 @@
 import axios from "axios";
 import { createContext } from "react";
-
-
 export const Feedcontext = createContext();
 
-let Authorization = localStorage.getItem('Authorization') || '';
+let Authorization = localStorage.getItem('Authorization') ;
 let headers = {
     Authorization: `Bearer ${Authorization}`
 };

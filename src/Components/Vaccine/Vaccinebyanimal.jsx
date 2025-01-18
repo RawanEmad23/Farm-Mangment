@@ -89,7 +89,7 @@ function Vaccinebyanimal() {
 
                         <div className="input-box">
                             <label className="label" htmlFor="givenEvery">Given Every</label>
-                            <select
+                            {/* <select
                                 id="givenEvery"
                                 name="givenEvery"
                                 className="input2"
@@ -101,7 +101,18 @@ function Vaccinebyanimal() {
                                 <option value="90">3 months (90 days)</option>
                                 <option value="180">6 months (180 days)</option>
                                 <option value="365">12 months (365 days)</option>
-                            </select>
+                            </select> */}
+  <input
+                                id="givenEvery"
+                                name="givenEvery"
+                                type="text"
+                                className="input2"
+                                placeholder="givenEvery"
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                                value={formik.values.givenEvery}
+                            />
+
                         </div>
 
                         <div className="input-box">

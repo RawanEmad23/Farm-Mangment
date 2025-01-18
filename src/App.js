@@ -46,6 +46,10 @@ import FeedContextProvider from "./Context/FeedContext.js";
 import FeedingTable from "./Components/Feed/FeedingTable.jsx";
 import Editfeed from "./Components/Feed/Editfeed.jsx";
 import Feedbylocation from "./Components/Feed/Feedbylocation.jsx";
+import FeedbylocationcontextProvider from "./Context/FeedbylocationContext.jsx";
+
+import EditFeedbylocation from "./Components/Feed/Editfeedbylocation.jsx";
+import Feedlocationtable from "./Components/Feed/feedlocationtable";
 
 
 let routers = createBrowserRouter([
@@ -87,6 +91,8 @@ let routers = createBrowserRouter([
       { path: "feedcon", element: <FeedingTable></FeedingTable>},
       { path: "editVaccine/:id", element: <ProtectedRoute><EditVaccine/></ProtectedRoute> },
       { path: "feedlocation", element: <Feedbylocation></Feedbylocation>},
+      { path: "feedlocationtable", element: <Feedlocationtable></Feedlocationtable>},
+      { path: "editfeedbylocation/:id", element: <ProtectedRoute><EditFeedbylocation></EditFeedbylocation></ProtectedRoute> },
     ],
   },
 ]);
@@ -107,8 +113,8 @@ export default function App() {
   },[]);
 
   return <>
-
-  <FeedContextProvider>
+<FeedbylocationcontextProvider>
+<FeedContextProvider>
   <ExclutedContextProvider>
   <VaccineanimalContextProvider>
   <GetAnimalContextProvider>
@@ -128,6 +134,8 @@ export default function App() {
   </ExclutedContextProvider>
 
   </FeedContextProvider>
+</FeedbylocationcontextProvider>
+
 
   </>
 }

@@ -90,6 +90,15 @@ export default function Navbar() {
          feedlocation
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link"
+                to="feedlocationtable"
+                style={{ color: "#E9E6E2" }}
+              >
+         feedlocationtable
+              </Link>
+            </li>
           </>
         ) : (
           ""
